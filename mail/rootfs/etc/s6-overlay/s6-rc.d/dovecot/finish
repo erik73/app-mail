@@ -1,11 +1,28 @@
 #!/command/with-contenv bashio
 # ==============================================================================
 # Home Assistant Community App: Mail
-# Take down the S6 supervision tree when PHP FPM fails
+# Take down the S6 supervision tree when Dovecot fails
 # ==============================================================================
-if [[ "${1}" -ne 0 ]] && [[ "${1}" -ne 256 ]]; then
-    bashio::log.warning "Dovetcot crashed, halting app"
-    /run/s6/basedir/bin/halt
-fi
+declare exit_code
+readonly exit_code_container=$(</run/s6-linux-init-container-results/exitcode)
+readonly exit_code_service="${1}"
+readonly exit_code_signal="${2}"
+readonly service="Dovecot"
 
-bashio::log.info "Dovetcot stopped, restarting..."
+bashio::log.info \
+  "Service ${service} exited with code ${exit_code_service}" \
+  "(by signal ${exit_code_signal})"
+
+if [[ "${exit_code_service}" -eq 256 ]]; then
+  if [[ "${exit_code_container}" -eq 0 ]]; then
+    echo $((128 + $exit_code_signal)) > /run/s6-linux-init-container-results/exitcode
+  fi
+  [[ "${exit_code_signal}" -eq 15 ]] && exec /run/s6/basedir/bin/halt
+elif [[ "${exit_code_service}" -ne 0 ]]; then
+  if [[ "${exit_code_container}" -eq 0 ]]; then
+    echo "${exit_code_service}" > /run/s6-linux-init-container-results/exitcode
+  fi
+  exec /run/s6/basedir/bin/halt
+else
+  bashio::log.info "Service ${service} restarting..."
+fi
