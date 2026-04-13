@@ -30,11 +30,11 @@ RUN apk add --no-cache \
     php84-pdo_mysql=8.4.20-r1 \
     postfix=3.10.8-r0 \
     postfix-mysql=3.10.8-r0 \
-    dovecot=2.4.3-r0 \
-    dovecot-pop3d=2.4.3-r0 \
-    dovecot-lmtpd=2.4.3-r0 \
-    dovecot-mysql=2.4.3-r0 \
-    dovecot-pigeonhole-plugin=2.4.3-r0 \
+    dovecot=2.4.3-r1 \
+    dovecot-pop3d=2.4.3-r1 \
+    dovecot-lmtpd=2.4.3-r1 \
+    dovecot-mysql=2.4.3-r1 \
+    dovecot-pigeonhole-plugin=2.4.3-r1 \
     rspamd-client=3.14.0-r0 \
     && apk add --no-cache --virtual .build-dependencies \
         php84-phar=8.4.20-r1 \
