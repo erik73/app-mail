@@ -14,4 +14,4 @@ permissions: {}
 
 jobs:
   workflows:
-    uses: erik73/workflows/.github/workflows/pr-labels.yaml@ea69922ce6a34b643f3009699517d5c788314dd4 # v2.0.1
+    uses: erik73/workflows/.github/workflows/pr-labels.yaml@6e107bbfcc7007ffc686df8999a3dde510f8c251 # v2.0.2
