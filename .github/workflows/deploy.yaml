@@ -20,13 +20,13 @@ jobs:
       pull-requests: read
       packages: read
       security-events: write
-    uses: erik73/workflows/.github/workflows/app-ci.yaml@ea69922ce6a34b643f3009699517d5c788314dd4 # v2.0.1
+    uses: erik73/workflows/.github/workflows/app-ci.yaml@6e107bbfcc7007ffc686df8999a3dde510f8c251 # v2.0.2
 
   deploy:
     needs: ci
     permissions:
       contents: read
       packages: write
-    uses: erik73/workflows/.github/workflows/app-deploy.yaml@ea69922ce6a34b643f3009699517d5c788314dd4 # v2.0.1
+    uses: erik73/workflows/.github/workflows/app-deploy.yaml@6e107bbfcc7007ffc686df8999a3dde510f8c251 # v2.0.2
     secrets:
       DISPATCH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}
