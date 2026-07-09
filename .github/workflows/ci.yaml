@@ -19,4 +19,4 @@ permissions:
 
 jobs:
   workflows:
-    uses: erik73/workflows/.github/workflows/app-ci.yaml@6e107bbfcc7007ffc686df8999a3dde510f8c251 # v2.0.2
+    uses: erik73/workflows/.github/workflows/app-ci.yaml@b825c628ef43b63d29c5884084db701d973a1879 # v2.0.3
