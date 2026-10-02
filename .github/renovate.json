@@ -66,7 +66,25 @@
       "matchDatasources": ["custom.alpine"],
       "matchPackageNames": [
         "alpine_3_24/php84",
-        "alpine_3_24/php84-iconv"
+        "alpine_3_24/php84-fpm",
+        "alpine_3_24/php84-pecl-imap",
+        "alpine_3_24/php84-session",
+        "alpine_3_24/php84-opcache",
+        "alpine_3_24/php84-mbstring",
+        "alpine_3_24/php84-mysqli",
+        "alpine_3_24/php84-pdo_mysql",
+        "alpine_3_24/php84-phar",
+        "alpine_3_24/php84-tokenizer",
+        "alpine_3_24/php84-curl",
+        "alpine_3_24/php84-sqlite",
+        "alpine_3_24/php84-dom",
+        "alpine_3_24/php84-xml",
+        "alpine_3_24/php84-xmlwriter",
+        "alpine_3_24/php84-iconv",
+        "alpine_3_24/php84-intl",
+        "alpine_3_24/php84-simplexml",
+        "alpine_3_24/rspamd-client"
+
       ],
       "registryUrls": [
         "https://dl-cdn.alpinelinux.org/alpine/v3.24/community/x86_64/"
