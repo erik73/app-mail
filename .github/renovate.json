@@ -76,7 +76,7 @@
         "alpine_3_24/php84-phar",
         "alpine_3_24/php84-tokenizer",
         "alpine_3_24/php84-curl",
-        "alpine_3_24/php84-sqlite",
+        "alpine_3_24/php84-sqlite3",
         "alpine_3_24/php84-dom",
         "alpine_3_24/php84-xml",
         "alpine_3_24/php84-xmlwriter",
