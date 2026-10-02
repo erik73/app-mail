@@ -84,7 +84,6 @@
         "alpine_3_24/php84-intl",
         "alpine_3_24/php84-simplexml",
         "alpine_3_24/rspamd-client"
-
       ],
       "registryUrls": [
         "https://dl-cdn.alpinelinux.org/alpine/v3.24/community/x86_64/"
